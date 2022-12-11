@@ -1,0 +1,137 @@
+html, body{
+    background-color: antiquewhite;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    height: 100vh;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.create{
+    display: none;
+    flex-direction: column;
+    width: 0vw;
+    gap:20px;
+    padding: 20px;
+    border: 2px solid black;
+    transition: 1s;
+
+}
+.create-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35vw;
+}
+.color{
+    display: none;
+}
+
+#add{
+    width: 100px;
+}
+
+.color {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+}
+.colours{
+    height: 50px;
+}
+.colour {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.colour:hover{
+    border: 2px solid black;
+}
+#close{
+    border: none;
+    outline: none;
+    background-color: antiquewhite;
+    font-size: 18x;
+}
+
+#close:hover{
+    background-color: rgb(86, 93, 2);
+    color: rgb(245, 245, 245);
+    border-radius: 50%;
+}
+
+.progress-bar{
+    width: 500px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.progress{
+    width: 0.1%;
+    background-color:black;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+
+#title, #subtitle{
+    width: 100%;
+}
+.upper{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.creatives{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap:16px;   
+    height: 1000px;
+    width: 600px;
+    padding:40px 40px 40px 0;
+    overflow: auto;
+}
+
+.creative{
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 0.5rem;
+}
+
+.creative div:first-child{
+    font-size: 36px;
+    padding-left: 20px;
+}
+.creative div:last-child{
+    font-size: 20px;
+    padding-left: 30px;
+}
+
