@@ -57,13 +57,38 @@ document.getElementById("search").addEventListener("keyup",function(){
 
     }
 });
-//alert("ghj");
+
+function resize() {
+    if(screen.width<830){
+        if(create.style.display=="flex"){
+            main.style.width="0%";
+            main.style.display="none";
+            
+            create.style.width="100%";
+        }else{
+            main.style.display="flex";
+            main.style.width="100%";
+            create.style.width="0%";
+        }
+    }else{
+        if(create.style.display=="flex"){
+            main.style.display="flex";
+            main.style.width="65%";
+            create.style.width="100%";
+        }else{
+            main.style.display="flex";
+            main.style.width="35%";
+            create.style.width="0%";
+        }
+    }
+}
+window.addEventListener("resize", resize);
+
 document.getElementById("add").addEventListener("click",function(){
     //alert("hii");
     create.style.display="flex";
-    //main.style.width="65vw";
+    resize();
     document.getElementById("add").disabled=true;
-    create.style.width="35%";
     let coloursDiv=document.querySelectorAll(".colour");
 
     for(let i=0;i<coloursDiv.length;i++){
@@ -74,7 +99,7 @@ document.getElementById("add").addEventListener("click",function(){
 document.getElementById("close").addEventListener("click",function(){
     
     create.style.display="none";
-    main.style.width="65vw";
+    main.style.display="flex";
     create.style.width="0vw";
     document.getElementById("add").disabled=false;
 
@@ -114,9 +139,12 @@ document.getElementById("done").addEventListener("click",function(){
     if(!isValid()){
         return;
     }
+
+
+
     create.style.display="none";
-    //main.style.width="100vw";
     create.style.width="0vw";
+    //resize();
     
     document.getElementById("add").disabled=false;
     

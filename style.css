@@ -3,7 +3,6 @@ html, body{
     padding-left: 10px;
     padding-top: 10px;
     box-sizing: border-box;
-    overflow: hidden;
 }
 .container{
     display: flex;
@@ -11,8 +10,24 @@ html, body{
 .main{
     display: flex;
     flex-direction: column;
-    width: 65vw;
-    height: 100vh;
+    width: 100%;
+    gap:20px;
+    height: max-content;
+}
+.upper{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.creatives{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap:16px;   
+    height: 70%;
+    width: 600px;
+    padding:40px 40px 40px 0;
+    overflow: auto;
 }
 .filter{
     display: flex;
@@ -33,7 +48,7 @@ html, body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 35vw;
+    width: 100%;
 }
 .color{
     display: none;
@@ -97,30 +112,17 @@ html, body{
 #title, #subtitle{
     width: 100%;
 }
-.upper{
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-}
-.creatives{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    gap:16px;   
-    height: 1000px;
-    width: 600px;
-    padding:40px 40px 40px 0;
-    overflow: auto;
-}
+
+
 
 .creative{
     display: flex;
     flex-direction: column;
-    
+    justify-content: baseline;
     padding-left: 20px;
     padding-top: 10px;
     width: 500px;
-    height: 100px;
+    height: 6rem;
     border-radius: 5px;
     border: 2px solid black;
     padding: 0.5rem;
