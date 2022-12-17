@@ -88,6 +88,12 @@ document.getElementById("add").addEventListener("click",function(){
     //alert("hii");
     create.style.display="flex";
     resize();
+    if(screen.width<830){
+        create.style.width="100%";
+    }else{
+        create.style.width="35%";
+    }
+    
     document.getElementById("add").disabled=true;
     let coloursDiv=document.querySelectorAll(".colour");
 
@@ -144,7 +150,7 @@ document.getElementById("done").addEventListener("click",function(){
 
     create.style.display="none";
     create.style.width="0vw";
-    //resize();
+    resize();
     
     document.getElementById("add").disabled=false;
     
